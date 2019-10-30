@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_010846) do
+ActiveRecord::Schema.define(version: 2019_10_29_015039) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.text "blog_entry"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.string "message"
+    t.string "string"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
