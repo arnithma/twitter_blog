@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>String:</strong>
-  <%= @tweet.string %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @tweet.user_id %>
+  <%= @tweet.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
