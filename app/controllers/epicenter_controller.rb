@@ -2,9 +2,14 @@ class EpicenterController < ApplicationController
   def feed
   	@following_tweets= []
 
-  	Tweet.all.each do |tweet| 
+  	Tweet.all.each do |tweet|
+  		unless current_user.blank? 
   		if current_user.following.include?(tweet.user_id) || current_user.id == tweet.user_id
-  			@following_tweets.push(tweets)
+  			@following_tweets.push(tweet)
+  		end
+  		else
+  			redirect_to new_user_session_path
+  		return
   		end
   	end		
   end
