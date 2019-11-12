@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_020821) do
+ActiveRecord::Schema.define(version: 2019_11_12_005833) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_020821) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "link"
   end
 
 # Could not dump table "users" because of following StandardError
