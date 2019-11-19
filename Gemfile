@@ -13,7 +13,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'better_errors', group: :development
-
+gem 'binding_of_caller'
 ##########
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
